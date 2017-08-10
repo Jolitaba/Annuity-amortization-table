@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Annuity amortization table</title>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<h2>Loan annuity amortization table</h2>
+		
+		<div id="loan_src">
+			<form name="loan_form">
+				<table style="margin:10px;">
+				
+					<tr>
+						<td>Loan Amount:</td>
+						<td><input type="text" id='loan_amt' name="loan_amt" size="10" class="inputs"></td>
+					</tr>
+					
+					<tr>
+						<td>Number of Months:</td>
+						<td><input type="text" id='months' name="months" size="10" class="inputs"></td>
+					</tr>
+					
+					<tr>
+						<td>Annual Interest Rate: <br/><span style="font-size:80%">(ex. 5% = 5)</span></td>
+						<td><input type="text" id="rate" name="rate" size="10" class="inputs"></td>
+					</tr>
+					
+					<tr>
+						<td>Extra Payment (optional):</td>
+						<td><input type="text" id='extra' name="extra" size="10" value="0" class="inputs"></td>
+					</tr>
+				
+					<tr>
+						<td><input type="button" id='submit' onclick="validate()" value="Calculate" class="input"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		<div id="loan_info">
+			<div id="dialog" title="Basic dialog">
+			<p id='amt'></p>
+			<p id='numMonths'></p>
+			<p id='interestRate'></p>
+			<p id='extraPayment'></p>
+		 </div>
+		</div>
+		
+		<div id="table_header">
+			<table cellpadding="15" >
+				<tr>
+					<td width="70" align="center"><b>Payment#</b></td>
+					<td width="70" align="center"><b>Remaining amount</b></td>
+					<td width="70" align="center"><b>Principal payment</b></td>
+					<td width="70" align="center"><b>Interest payment</b></td>
+					<td width="70" align="center"><b>Total payment</b></td>
+					<td width="70" align="center"><b>Interest rate</b></td>
+				</tr>	
+			</table>
+		</div>
+		
+		<div id="table" class="table_info"> 
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
